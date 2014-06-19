@@ -6,15 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Quiz</title>
 <body>
-	<div class="spacer"></div>
+	<div class='spacer'></div>
 	<form id='quizWrapper'>
-		<div id="quiz"></div>
-		<button type="button">back</button>
+		<div id='quiz'></div>
+		<button type='button'>back</button>
 		<input type='submit' value="next">
+		<button type='button' id='restart'></button>
 	</form>
 <script id="questionTemp"  type="text/template">
 	<div>
-		<h2 class="questionTitle">{{ question }}</h2>
+		<h2>{{ question }}</h2>
 		<ol id='listItems'>
 			{{ #choices }}
 			{{#.}}
@@ -26,7 +27,7 @@
 		</ol>
 	</div>
 </script>
-<script id="finished" type="text/template">
+<script id='finished' type="text/template">
 	<div>
 		<h2>You finished the Quiz</h2>
 		<p> Your scored  {{ correct }} out of {{ length }} correctly</p>
