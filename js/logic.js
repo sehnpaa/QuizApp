@@ -131,7 +131,7 @@
         animate(next, 'slideOutUp');
         window.setTimeout(function () {
             createViews();
-        },500);
+        },1000);
     }
 
     window.addEventListener('load', createViews);
