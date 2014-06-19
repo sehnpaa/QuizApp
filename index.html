@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="libs/mustache.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/animate.css/animate.css">
+	<style type="text/css">
+		#quizWrapper {
+			margin: 0 auto;
+			width: 600px;
+		}
+
+		.spacer {
+			width: 100%;
+			height: 300px;
+		}
+
+
+	</style>
+	<title>Quiz</title>
+<body>
+	<div class="spacer"></div>
+	<form id='quizWrapper'>
+		<div id="quiz">
+			
+		</div>
+		<button type="button">back</button>
+		<input type='submit' value="next">
+	</form>
+<script id="questionTemp"  type="text/template">
+	<div>
+		<h2 class="questionTitle">{{ question }}</h2>
+		<ol id='listItems'>
+			{{ #choices }}
+			{{#.}}
+			<li><input type='radio' name='choices' value="{{ . }}" required>
+				<label>{{ . }}</label>
+			</li>
+			{{ /. }}
+			{{ /choices }}
+		</ol>
+	</div>
+</script>
+<script id="finished" type="text/template">
+	<div>
+		<h2>You finished the Quiz</h2>
+		<p> Your scored  {{ correct }} out of {{ length }} correctly<p>
+</script>
+<script src="helper.js"></script>
+<script src="store.js"></script>
+<script src="model.js"></script>
+<script src='data.js'></script>
+<script src="logic.js"></script>
+<body>
+</body>
+</html>	
