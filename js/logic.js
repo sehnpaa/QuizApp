@@ -127,7 +127,10 @@
 
     function restartQuiz () {
     	localStorage.clear();
-    	createViews();
+        animate(next, 'slideOutUp');
+        window.setTimeout(function () {
+            createViews();
+        }, 1000);
     }
 
     window.addEventListener('load', createViews);
