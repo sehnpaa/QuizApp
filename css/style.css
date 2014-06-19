@@ -1,6 +1,15 @@
+body {
+	font-family: arial;
+	background: #94D4D4;
+}
+
 #quizWrapper {
 	margin: 0 auto;
 	width: 600px;
+	border: 1px solid gray;
+	background: #E6E6E6;
+	padding: 30px;
+	border-radius: 5px;
 }
 
 .spacer {
@@ -10,4 +19,16 @@
 
 #restart {
 	display: none;
+}
+
+button, input[type="submit"] {
+	width: 100px;
+	padding: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+	border: 2px solid #94D4D4;
+	border-radius: 5px;
+	font-weight: bold;
+	background: #66FFFF;
 }

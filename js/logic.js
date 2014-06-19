@@ -3,7 +3,7 @@
         quiz = $('#quiz'),
         next = $('#quizWrapper'),
         nextButton = $("input[type='submit']"),
-        back = $('button'),
+        back = $('#back'),
         restart = $('#restart'),
         template = $('#questionTemp').innerHTML,
         lastTemp = $('#finished').innerHTML,
@@ -38,10 +38,11 @@
             if (!currentPage) back.hide();
             else back.show();
 
-            restart.hide();
             quiz.innerHTML = views[currentPage].renderTemplate(template);
             checkAnswer();
         }
+        restart.hide();
+        nextButton.show();
     }
 
     function nextPage(event) {
@@ -50,7 +51,7 @@
         window.setTimeout(function () {
 
             isAnswered();
-            animate(next, 'slideInLeft');
+            animate(next, 'bounceInLeft');
             currentPage++;
             updateStore(currentPage);
 
@@ -111,10 +112,11 @@
         animate(next, 'slideOutLeft');
         window.setTimeout(function () {
             isAnswered();
-            animate(next, 'slideInRight');
+            animate(next, 'bounceInRight');
             currentPage--;
             updateStore(currentPage);
             nextButton.show();
+            restart.hide();
 
             if (!currentPage) back.hide();
 

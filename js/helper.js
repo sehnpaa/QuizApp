@@ -10,7 +10,7 @@
 	}
 
 	Object.prototype.show = function () {
-		return this.style.display = '';
+		return this.style.display = 'inline-block';
 	}
 
 	Object.prototype.hide = function () {
