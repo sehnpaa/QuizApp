@@ -14,7 +14,6 @@
         views;
 
     function createViews() {
-        //create a 1 second delay on page load or reload
             views = data.map(function (val) {
                 return new create(val);
             });
