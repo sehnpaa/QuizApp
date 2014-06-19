@@ -15,7 +15,6 @@
 
     function createViews() {
         //create a 1 second delay on page load or reload
-        window.setTimeout(function () {
             views = data.map(function (val) {
                 return new create(val);
             });
@@ -45,7 +44,6 @@
             }
             restart.hide();
             nextButton.show();
-            }, 1000);
     }
 
     function nextPage(event) {
@@ -133,7 +131,7 @@
         animate(next, 'slideOutUp');
         window.setTimeout(function () {
             createViews();
-        }, 500);
+        },500);
     }
 
     window.addEventListener('load', createViews);
