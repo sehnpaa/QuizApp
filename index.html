@@ -19,8 +19,7 @@
 		<ol id='listItems'>
 			{{ #choices }}
 			{{#.}}
-			<li><input type='radio' name='choices' value="{{ . }}" required>
-				<label>{{ . }}</label>
+			<li><label>{<input type='radio' name='choices' value="{{ . }}" required>{{ . }}</label>
 			</li>
 			{{ /. }}
 			{{ /choices }}
