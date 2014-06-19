@@ -14,35 +14,38 @@
         views;
 
     function createViews() {
-        views = data.map(function (val) {
-            return new create(val);
-        });
-        animate(next, 'slideInDown');
-
-        if (!store.getData('user')) {
-            back.hide();
-            store.setData('user', {
-                currentPage: 0,
-                userAnswer: []
+        //create a 1 second delay on page load or reload
+        window.setTimeout(function () {
+            views = data.map(function (val) {
+                return new create(val);
             });
-            local = store.getData('user');
-            currentPage = 0;
-            quiz.innerHTML = views[currentPage].renderTemplate(template);
+            animate(next, 'slideInDown');
 
-        } else {
-            local = store.getData('user');
-            currentPage = local.currentPage;
+            if (!store.getData('user')) {
+                back.hide();
+                store.setData('user', {
+                    currentPage: 0,
+                    userAnswer: []
+                });
+                local = store.getData('user');
+                currentPage = 0;
+                quiz.innerHTML = views[currentPage].renderTemplate(template);
 
-            if (currentPage === (data.length)) return finish();
+            } else {
+                local = store.getData('user');
+                currentPage = local.currentPage;
 
-            if (!currentPage) back.hide();
-            else back.show();
+                if (currentPage === (data.length)) return finish();
 
-            quiz.innerHTML = views[currentPage].renderTemplate(template);
-            checkAnswer();
-        }
-        restart.hide();
-        nextButton.show();
+                if (!currentPage) back.hide();
+                else back.show();
+
+                quiz.innerHTML = views[currentPage].renderTemplate(template);
+                checkAnswer();
+            }
+            restart.hide();
+            nextButton.show();
+            }, 1000);
     }
 
     function nextPage(event) {
@@ -130,7 +133,7 @@
         animate(next, 'slideOutUp');
         window.setTimeout(function () {
             createViews();
-        }, 1000);
+        }, 500);
     }
 
     window.addEventListener('load', createViews);
