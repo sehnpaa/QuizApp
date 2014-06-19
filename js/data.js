@@ -29,9 +29,9 @@
         "choices": ["Fiddle", "Kinling", "Bindle", "Kindle"],
         "answer": "Kindle"
     }, {
-        "question": "If the hour hand on a clock moves 1/60 of a degree every minute how many degrees will the hand move in one hour?",
-        "choices": ["0", "30", "60", "15"],
-        "answer": "60"
+        "question": "Which pop duo was the first western band to play in The Peoples Republic of China?",
+        "choices": ["Wham", "Simon and Garfunkel", "Chas and Dave", "Right Said Fred"],
+        "answer": "Wham"
     }, {
         "question": "Some months have 31 days, and some months have 30 days. But how many have 28 days? ",
         "choices": ["1", "12", "3", "4"],
