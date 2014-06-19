@@ -1,0 +1,44 @@
+ul {
+	list-style: none;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+.status {
+	width: 300px;
+}
+
+.status li {
+	display: inline;
+	padding-right: 10px;
+}
+
+.edit {
+	display: none;
+	width: 50px;
+}
+
+.filter a {
+	text-decoration: none;
+	color: black;
+}
+
+.filter {
+	display: inline;
+}
+
+.filter li {
+	display: inline;
+	border-right: 1px solid gray;
+	padding: 0 5px;
+}
+
+.filter li:last-child {
+	border-right: none;
+}
+
+p {
+	display: inline-block;
+}
