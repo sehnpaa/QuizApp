@@ -1,6 +1,7 @@
 body {
 	font-family: arial;
 	background: #94D4D4;
+	overflow: hidden;
 }
 
 #quizWrapper {
